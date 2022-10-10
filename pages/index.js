@@ -20,7 +20,7 @@ export default function Home() {
         <section className="min-h-screen">
           <nav className="py-10 mb-10 flex justify-between">
             <div className="bg-gradient-to-b from-cyan-200 to-teal-400 rounded-full w-16 h-16 relative overflow-hidden">
-              <Image src={wave} layout="fill" objectFit="cover" alt="wave"/>
+              <a href="#"><Image src={wave} layout="fill" objectFit="cover" alt="wave"/></a>
             </div>
             <ul className="flex items-center gap-8">
               <li><BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className="cursor-pointer text-xl dark:text-gray-300"/></li>
@@ -30,8 +30,8 @@ export default function Home() {
             </ul>
           </nav>
 
-          <div className="text-center p-10 lg:flex gap-10">
-            <div className="rounded-full w-80 h-80 relative overflow-hidden mx-auto mb-10">
+          <div className="text-center md:flex gap-10 md:p-10">
+            <div className="rounded-full w-3/4 max-w-xs aspect-square relative overflow-hidden mx-auto mb-10">
               <Image src={me} layout="fill" objectFit='cover' alt="me"/>
             </div>
             <div>
@@ -42,8 +42,8 @@ export default function Home() {
                 at Swarthmore College &apos;25.
               </p>
               <div className="text-3xl text-gray-800 flex justify-center gap-8 dark:text-gray-300">
-                <AiFillLinkedin className="cursor-pointer"/>
-                <AiFillGithub className="cursor-pointer"/>
+                <a href="https://www.linkedin.com/in/nicholasyfu1/"><AiFillLinkedin className="cursor-pointer"/></a>
+                <a href="https://github.com/nicholasyfu1"><AiFillGithub className="cursor-pointer"/></a>
               </div>
             </div>
           </div>
