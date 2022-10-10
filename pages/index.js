@@ -18,7 +18,7 @@ export default function Home() {
         <section className="min-h-screen">
           <nav className="py-10 mb-10 flex justify-between">
             <div className="bg-gradient-to-b from-cyan-200 to-teal-400 rounded-full w-16 h-16 relative overflow-hidden">
-              <Image src='/../public/wave.png' layout="fill" objectFit="cover" />
+              <Image src='/../public/wave.png' layout="fill" objectFit="cover" alt="wave"/>
             </div>
             <ul className="flex items-center gap-8">
               <li><BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className="cursor-pointer text-xl dark:text-gray-300"/></li>
@@ -30,14 +30,14 @@ export default function Home() {
 
           <div className="text-center p-10 lg:flex gap-10">
             <div className="rounded-full w-80 h-80 relative overflow-hidden mx-auto mb-10">
-              <Image src='/../public/me.jpeg' layout="fill" objectFit='cover'/>
+              <Image src='/../public/me.jpeg' layout="fill" objectFit='cover' alt="me"/>
             </div>
             <div>
               <h2 className="text-5xl py-4 text-teal-600 font-medium dark:text-teal-300">Nicholas Fu</h2>
               <h3 className="text-xl dark:text-gray-300">Radical thinker, inspired developer.</h3>
               <p className="text-md py-6 text-gray-800 max-w-xl mx-auto dark:text-gray-400">
-                Welcome! I'm an aspiring software engineer currently studying computer science and political science 
-                at Swarthmore College '25.
+                Welcome! I&apos;m an aspiring software engineer currently studying computer science and political science 
+                at Swarthmore College &apos;25.
               </p>
               <div className="text-3xl text-gray-800 flex justify-center gap-8 dark:text-gray-300">
                 <AiFillLinkedin className="cursor-pointer"/>
