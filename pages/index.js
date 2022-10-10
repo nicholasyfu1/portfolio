@@ -8,6 +8,8 @@ import me from '../public/me.jpeg';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
+  const [effect, setEffect] = useState(false);
+
   return (
     <div className={darkMode ? "dark" : ""}>
       <Head>
@@ -19,12 +21,19 @@ export default function Home() {
       <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
         <section className="min-h-screen">
           <nav className="py-10 mb-10 flex justify-between">
-            <div className="bg-gradient-to-b from-cyan-200 to-teal-400 rounded-full w-16 h-16 relative overflow-hidden">
+            <div className="bg-gradient-to-b from-cyan-200 to-teal-400 rounded-full w-16 h-16 relative overflow-hidden hover:animate-wiggle">
               <a href="#"><Image src={wave} layout="fill" objectFit="cover" alt="wave"/></a>
             </div>
             <ul className="flex items-center gap-8">
-              <li><BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className="cursor-pointer text-xl dark:text-gray-300"/></li>
               <li>
+                <BsFillMoonStarsFill onClick={() => {
+                  setDarkMode(!darkMode);
+                  setEffect(true);
+                }} onAnimationEnd={() => 
+                  setEffect(false)
+                } className={`${effect && "animate-pingonce"} cursor-pointer text-xl dark:text-gray-300 transition delay-100 ease-in-out hover:-translate-y-0.5 hover:scale-110`}/>
+              </li>
+              <li className='transition delay-100 ease-in-out hover:-translate-y-0.5 hover:scale-110'>
                 <a className="bg-gradient-to-br from-cyan-200 to-teal-400 px-4 py-2 rounded-md font-light" href="#">Resume</a>
               </li>
             </ul>
@@ -42,8 +51,8 @@ export default function Home() {
                 at Swarthmore College &apos;25.
               </p>
               <div className="text-3xl text-gray-800 flex justify-center gap-8 dark:text-gray-300">
-                <a href="https://www.linkedin.com/in/nicholasyfu1/"><AiFillLinkedin className="cursor-pointer"/></a>
-                <a href="https://github.com/nicholasyfu1"><AiFillGithub className="cursor-pointer"/></a>
+                <a href="https://www.linkedin.com/in/nicholasyfu1/"><AiFillLinkedin className="cursor-pointer transition delay-100 ease-in-out hover:-translate-y-0.5 hover:scale-110"/></a>
+                <a href="https://github.com/nicholasyfu1"><AiFillGithub className="cursor-pointer transition delay-100 ease-in-out hover:-translate-y-0.5 hover:scale-110"/></a>
               </div>
             </div>
           </div>
